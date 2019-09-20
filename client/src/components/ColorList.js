@@ -7,7 +7,7 @@ const initialColor = {
   code: { hex: "" }
 };
 
-const ColorList = ({ colors, updateColors, props }) => {
+const ColorList = ({ colors, updateColors }) => {
   console.log('Colors:',colors);
   const [editing, setEditing] = useState(false);
   const [colorToEdit, setColorToEdit] = useState(initialColor);
@@ -29,8 +29,6 @@ const ColorList = ({ colors, updateColors, props }) => {
         colors.filter(el => el.id !== colorToEdit.id),
         res.data,
       ])
-      props.history.push('/');
-      // setItem(initialItem);
     })
     .catch(err => console.log(err.response));
   };
@@ -38,7 +36,7 @@ const ColorList = ({ colors, updateColors, props }) => {
   const updateColor = color => {
     let newColorList = colors.filter(el => el.id !== color);
     updateColors(newColorList);
-    props.history.push('/');
+    
   };
 
   const deleteColor = color => {

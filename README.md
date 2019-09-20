@@ -29,9 +29,20 @@ In this project you will create a login page and request a token from the server
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain what a token is used for.
+
+Tokens are used for authentication purposes. Websites use them as proof that the user is authenticated with them. 
+
 - [ ] What steps can you take in your web apps to keep your data secure?
+
+We can create a login endpoint that takes in a username and password. From there, the server will decide if the credentials are legitimate. The developer must create an Axios configuration that attaches a header of Authorization: "token" to every request. This will ensure that routes are only accessed if the user enters the correct credentials. 
+
 - [ ] Describe how web servers work.
+
+Web serves "serve" web sites to anybody with the correct URL by retrieving the site's code. Computers connect to the server through the internet. 
+
 - [ ] Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
+
+CRUD stands for create, read, update and delete. The create part can be accomplished with POST, update with PUT, read with GET, and delete with DELETE.  
 
 
 ## Project Set Up
